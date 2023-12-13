@@ -29,10 +29,11 @@ export default function addProductsPage() {
     return (
         <div>
             <h1 className="text-lg mb-3 font-bold">ADD PRODUCT</h1>
-            <form>
+            <form action={addProducts}>
 
                 <input
                     required
+                    autoComplete="on"
                     name="name"
                     placeholder="Name"
                     className="mb-3 w-full input input-bordered" />
