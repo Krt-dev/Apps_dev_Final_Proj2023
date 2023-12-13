@@ -8,6 +8,10 @@ interface productGridProps{
 }
 
 export default function ProductGrid({product}: productGridProps) {
+    const isNewProduct = Date.now() - new Date(product.dateCreate).getTime() - 1000 * 60 * 60 *24 * 7 // checking the days of product age
+    
+
+    
     return(
         <Link href ={"/products/" + product.id}
         className="card w-full bg-base-300 hover:shadow-xl transition-shadow"> <div className="card-body">
@@ -20,9 +24,10 @@ export default function ProductGrid({product}: productGridProps) {
            
             <h2 className="card-title">
                 {product.name}
+                {isNewProduct && <div className="badge badge-accent">New</div>}
                 </h2></div>
                 <p className="p-5">{product.description}</p>
-                <Price price={product.price} className=""></Price></Link>
+                <Price price={product.price}></Price></Link>
 
     )
 

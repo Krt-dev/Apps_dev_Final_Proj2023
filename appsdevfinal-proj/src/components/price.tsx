@@ -6,6 +6,6 @@ interface PriceProps {
 }
 
 export default function Price({price, className}:PriceProps){
-    return(<span className= {`badge p-4 ${className}`}>{formatPrice(price)}</span>);
+    return(<span className= {`badge badge-accent p-4 ${className}`}>{formatPrice(price)}</span>);
 
 }
