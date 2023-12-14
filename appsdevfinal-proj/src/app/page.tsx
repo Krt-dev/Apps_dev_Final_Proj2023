@@ -8,7 +8,7 @@ export default async function Home() {
     orderBy: { id: "desc" }
   })
   return (
-    <div>
+    <><div>
       <div className="hero-content flex-col lg:flex-row">
         <Image src={product[0].imageUrl}
           alt={product[0].name}
@@ -21,6 +21,11 @@ export default async function Home() {
           <Link href={"/products/" + product[0].id} className="btn btn-accent">Check Product</Link>
         </div>
       </div>
-    </div>
+    </div><div className="my-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3"
+      >
+{...product.slice(1).map((product) => (<ProductGrid product={product} key={product.id} />
+      ))}
+      </div></>
+    
   )
 }
