@@ -11,6 +11,9 @@ const nextConfig = {
       ],
       domains: ["plus.unsplash.com"],
     },
+    env: {
+      metadataBase: 'http://localhost:3000/cart',
+    },
   };
   
   module.exports = nextConfig;

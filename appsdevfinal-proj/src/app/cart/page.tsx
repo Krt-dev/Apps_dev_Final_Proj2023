@@ -4,8 +4,9 @@ import { setProductQuantity } from "./actions";
 import { formatPrice } from "@/lib/db/format";
 
 export const metadata = {
-    title: "Your Cart - RhuKuJo Store",
+    title: 'Your Cart - RhuKuJo Store',
 };
+
 export default async function CartPage() {
     //Fetch Item Data
     const cart = await getCart();

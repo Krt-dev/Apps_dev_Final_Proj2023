@@ -37,7 +37,7 @@ export default function CartEntry({cartItem : {product, quantity}, setProductQua
                 className="rounded-lg"
                 />
                 <div> 
-                    <Link href={"/product/" + product.id} className="font-bold"> {/*Link Product Name to Product detail page?*/}
+                    <Link href={"/products/" + product.id} className="font-bold"> {/*Link Product Name to Product detail page?*/}
                         {product.name}
                     </Link>
                     <div>Price: {formatPrice(product.price)}</div>
